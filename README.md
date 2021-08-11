@@ -4,3 +4,4 @@ This project uses Jquery, Bulma, Moment.js along with HTML, CSS, and vanilla JS 
 
 Check it out here: https://nickwojt.github.io/weather-dashboard/
 
+![Project](./weather.png "Completed Project")
