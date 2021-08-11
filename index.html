@@ -13,41 +13,54 @@
       referrerpolicy="no-referrer"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid d-flex justify-content-center">
-        <span class="navbar-brand mb-0 h1 fs-1">Weather Dashboard</span>
+    <nav
+      class="navbar columns has-background-dark"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div
+        class="
+          column
+          navbar-brand
+          is-6 is-offset-3
+          has-text-centered has-text-white
+        "
+      >
+        <h1 class="is-size-1">Weather Dashboard</h1>
       </div>
     </nav>
-    <div class="container row my-5 justify-content-between">
-      <div class="mb-3 col-2 cities">
-        <label for="exampleFormControlInput1" class="form-label fs-4"
-          >Search for a City</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="exampleFormControlInput1"
-          placeholder="San Francisco"
-        />
-        <button type="button" class="btn btn-primary my-2">Search</button>
-        <hr />
+    <div class="container">
+      <div class="columns mt-6">
+        <div class="column is-4 cities">
+          <h1 class="is-size-1">Search For A City:</h1>
+          <form class="form" action="">
+            <div class="control">
+              <input class="input" type="text" placeholder="San Francisco" />
+            </div>
+            <br />
+            <div class="control has-text-centered">
+              <input
+                class="button is-primary is-fullwidth"
+                type="submit"
+                value="Search"
+              />
+            </div>
+          </form>
+          <hr class="has-background-dark" />
+        </div>
+
+        <div class="column is-7 is-offset-1 columns is-multiline">
+          <div class="column is-12 main-area"></div>
+          <div class="column is-12 forecast"></div>
+        </div>
       </div>
-      <div class="specifics col-8 bg-dark">Hello</div>
-      <div class="forecast col-8 bg-dark">Hello</div>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-      crossorigin="anonymous"
-    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -60,6 +73,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
